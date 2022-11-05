@@ -17,7 +17,13 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .container {
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,9 +33,26 @@ img {
   text-align: center;
 }
 
+.d-flex {
+  margin: 4rem 0 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .title {
-  margin: 3rem 0;
-  text-align: center;
+  text-align: left;
+}
+
+.cta {
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  background-color: rebeccapurple;
+  color: white;
+  align-self: center;
 }
 
 .cards {
@@ -92,9 +115,29 @@ footer a {
 }
 
 /* Media Query */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .d-flex {
+    max-width: 900px;
+  }
+}
+
 @media (max-width: 992px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .d-flex {
+    display: block;
+  }
+
+  .title {
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 1rem;
   }
 }
 
