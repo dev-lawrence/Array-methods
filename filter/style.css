@@ -56,7 +56,20 @@ a {
 }
 
 .filter-box {
-  margin-bottom: 2rem;
+  align-self: flex-start;
+}
+
+.form {
+  width: 30%;
+}
+
+.form input {
+  height: 30px;
+  width: 100%;
+  border: 2px solid black;
+  outline: none;
+  padding: 1rem 0.3rem;
+  font-family: inherit;
 }
 
 .btn {

@@ -187,6 +187,24 @@ buttons.forEach((button) => {
   });
 });
 
+// Search filter for products
+const search = document.querySelector('.search');
+
+search.addEventListener('keyup', (e) => {
+  e.preventDefault();
+  const searchValue = search.value.toLowerCase().trim();
+
+  products.forEach((product) => {
+    if (product.classList.contains(searchValue)) {
+      product.style.display = 'block';
+    } else if (searchValue == '') {
+      product.style.display = 'block';
+    } else {
+      product.style.display = 'none';
+    }
+  });
+});
+
 // const gadgets = [
 //   { name: 'Iphone', price: 2000, location: 'Delta' },
 
