@@ -25,7 +25,7 @@ a {
 .container {
   padding: 0 1rem;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
   max-width: 1200px;
@@ -56,6 +56,7 @@ a {
 }
 
 .filter-box {
+  margin-top: 3rem;
   align-self: flex-start;
 }
 
@@ -95,20 +96,11 @@ a {
 }
 
 .cards {
+  justify-content: flex-start;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   place-items: center;
   column-gap: 2rem;
-}
-
-.hide {
-  opacity: 0;
-  transform: scale(0);
-}
-
-.show {
-  opacity: 1;
-  transform: scale(1);
 }
 
 .product {
@@ -186,7 +178,25 @@ footer a {
     padding: 0 1rem;
   }
 
+  .form {
+    width: 100%;
+  }
+
+  .filter-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .cards {
     display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .filter-box {
+    margin-top: 0;
   }
 }
