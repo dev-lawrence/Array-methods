@@ -13,17 +13,17 @@ const output = document.querySelector('#output');
 
 // Functions
 // function to load all the companies
-// const loadCompanies = () => {
-//   let temp = `<ul class="list-items">`;
+const loadCompanies = () => {
+  let temp = `<ul class="list-items">`;
 
-//   techCompanies.forEach((company) => {
-//     temp += `<li class="list-item">${company}</li>`;
-//   });
+  techCompanies.forEach((company) => {
+    temp += `<li class="list-item">${company}</li>`;
+  });
 
-//   temp += `</ul>`;
+  temp += `</ul>`;
 
-//   output.innerHTML = temp;
-// };
+  output.innerHTML = temp;
+};
 
 // const loadCompanies = () => {
 //   let ul = document.createElement('ul');
@@ -38,7 +38,7 @@ const output = document.querySelector('#output');
 // };
 
 // Event Listeners
-// window.addEventListener('DOMContentLoaded', loadCompanies);
+window.addEventListener('DOMContentLoaded', loadCompanies);
 
 // const numbers = [1, 10, 5, 16, 74, 39, 203];
 
