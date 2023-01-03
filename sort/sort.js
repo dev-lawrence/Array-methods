@@ -13,29 +13,29 @@ const output = document.querySelector('#output');
 
 // Functions
 // function to load all the companies
-const loadCompanies = () => {
-  let temp = `<ul class="list-items">`;
 
+const loadCompanies = () => {
+  // create an unordered list
+  const ul = document.createElement('ul');
+  // give the unordered list a classname
+  ul.className = 'list-items';
+
+  // loop through the list of companies
   techCompanies.forEach((company) => {
-    temp += `<li class="list-item">${company}</li>`;
+    // create a list item
+    const li = document.createElement('li');
+    // give the list a classname
+    li.className = 'list-item';
+    // put each item in the list
+    li.textContent = company;
+
+    // append the list item to the unordered list
+    ul.appendChild(li);
   });
 
-  temp += `</ul>`;
-
-  output.innerHTML = temp;
+  // append the unordered list item to the ouput
+  output.append(ul);
 };
-
-// const loadCompanies = () => {
-//   let ul = document.createElement('ul');
-//   ul.className = 'list-items';
-
-//   techCompanies.forEach((company) => {
-//     const li = document.createElement('li');
-//     li.className = 'list-item';
-//     li.textContent = company;
-//     console.log(li);
-//   });
-// };
 
 // Event Listeners
 window.addEventListener('DOMContentLoaded', loadCompanies);
