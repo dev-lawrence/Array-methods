@@ -43,11 +43,9 @@ const loadCompanies = () => {
 let ascending = false;
 
 const sortItems = () => {
-  // let ul;
   let sortedList;
 
   ascending = !ascending;
-  const i = document.querySelector('.up');
 
   if (ascending) {
     icon.innerHTML = '<i class="fa-solid fa-caret-down up"></i>';
