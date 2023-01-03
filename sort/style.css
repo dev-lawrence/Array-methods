@@ -42,19 +42,25 @@ a {
 }
 
 .btn {
+  position: relative;
   font-size: 1rem;
   cursor: pointer;
   display: inline-block;
-  padding: 0 2rem;
+  padding: 0 2.5rem 0 1rem;
   background-color: rebeccapurple;
   border-radius: 10px;
   border: none;
   color: white;
 }
 
-.btn i {
+.icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.icon i {
   font-size: 1.2rem;
-  padding-left: 0.3rem;
 }
 
 .cta {
@@ -74,7 +80,7 @@ a {
 }
 
 .output {
-  margin: 3rem 0;
+  margin: 3rem 0 4rem;
 }
 
 .output .list-items {

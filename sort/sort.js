@@ -11,19 +11,21 @@ const techCompanies = [
 
 // Get element from the Dom
 const output = document.querySelector('#output');
+const sortBtn = document.querySelector('[data-sort]');
+const icon = document.querySelector('#icon');
 
 // Functions
 // function to load all the companies
 const loadCompanies = () => {
   // create an unordered list
-  const ul = document.createElement('ul');
+  let ul = document.createElement('ul');
   // give the unordered list a classname
   ul.className = 'list-items';
 
   // loop through the list of companies
   techCompanies.forEach((company) => {
     // create a list item
-    const li = document.createElement('li');
+    let li = document.createElement('li');
     // give the list a classname
     li.className = 'list-item';
     // put each item in the list
@@ -37,27 +39,35 @@ const loadCompanies = () => {
   output.append(ul);
 };
 
+// Sort items
+let ascending = false;
+
+const sortItems = () => {
+  // let ul;
+  let sortedList;
+
+  ascending = !ascending;
+  const i = document.querySelector('.up');
+
+  if (ascending) {
+    icon.innerHTML = '<i class="fa-solid fa-caret-down up"></i>';
+    sortedList = techCompanies.sort();
+  } else {
+    sortedList = techCompanies.sort().reverse();
+    icon.innerHTML = '<i class="fa-solid fa-caret-up up"></i>';
+  }
+
+  // display sorted list in the DOM
+  let ul = `<ul class="list-items">`;
+
+  sortedList.forEach((company) => {
+    ul += `<li class="list-item">${company}</li>`;
+  });
+
+  ul += `</ul>`;
+  output.innerHTML = ul;
+};
+
 // Event Listeners
 window.addEventListener('DOMContentLoaded', loadCompanies);
-
-// const numbers = [1, 10, 5, 16, 74, 39, 203];
-
-// const comparedNumbers = numbers.sort((a, b) => {
-//   return a - b;
-// });
-
-// const names = ['Lawrence', 'James', 'Morgan'];
-
-// console.log(comparedNumbers);
-
-// const companies = [
-//   { name: 'Google', start: 2010 },
-//   { name: 'Facebook', start: 2009 },
-//   { name: 'Instagram', start: 2022 },
-//   { name: 'Netflix', start: 2000 },
-//   { name: 'ChatGpt', start: 1999 },
-// ];
-
-// const sortedCompanies = companies.sort((a, b) => (a.start > b.start ? 1 : -1));
-
-// console.log(sortedCompanies);
+sortBtn.addEventListener('click', sortItems);
