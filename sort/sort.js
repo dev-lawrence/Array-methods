@@ -13,7 +13,6 @@ const output = document.querySelector('#output');
 
 // Functions
 // function to load all the companies
-
 const loadCompanies = () => {
   // create an unordered list
   const ul = document.createElement('ul');
