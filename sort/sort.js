@@ -6,6 +6,7 @@ const techCompanies = [
   'Instagram',
   'Snapchat',
   'Twitter',
+  'Airbnb',
 ];
 
 // Get element from the Dom
