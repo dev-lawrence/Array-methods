@@ -1,12 +1,17 @@
 // grab the buttons and products from the dom
 const buttons = document.querySelectorAll('.btn');
 const products = document.querySelectorAll('.product');
+const form = document.querySelector('.form');
+const search = document.querySelector('#filter-search');
+const msg = document.querySelector('.error-msg');
 
 // loop through the buttons
 buttons.forEach((button) => {
   // add event listeners to the buttons
   button.addEventListener('click', (e) => {
     const active = document.querySelector('.active');
+
+    search.value = '';
 
     // remove the active class from the button
     active.classList.remove('active');
@@ -34,9 +39,10 @@ buttons.forEach((button) => {
   });
 });
 
-// Search filter for products
-const search = document.querySelector('#filter-search');
-const msg = document.querySelector('.error-msg');
+// stop form from submitting
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+});
 
 // function to filter products
 const filterProducts = () => {
