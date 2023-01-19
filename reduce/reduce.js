@@ -9,6 +9,7 @@ whatever you return from your last iteration is going to your variable that you 
 
 */
 
+// EXAMPLE 1
 // const ages = [2, 10, 12, 4, 6];
 
 // const totalAge = ages.reduce((total, age) => {
@@ -19,6 +20,16 @@ whatever you return from your last iteration is going to your variable that you 
 
 // console.log(totalAge);
 
+// EXAMPLE 2
+// const numbers = [2, 10, 12, 4, 6];
+
+// const totalNumber = numbers.reduce((total, number) => {
+//   return total + number;
+// }, 0);
+
+// console.log(totalNumber); // output : 34
+
+// EXAMPLE 3
 // const items = [
 //   { name: 'rice', price: 300 },
 //   { name: 'beans', price: 400 },
@@ -35,6 +46,7 @@ whatever you return from your last iteration is going to your variable that you 
 //   return total + item.price;
 // }, 0);
 
+// EXAMPLE 4
 // const students = [
 //   { name: 'lawrence', age: 32 },
 //   { name: 'james', age: 22 },
@@ -54,6 +66,42 @@ whatever you return from your last iteration is going to your variable that you 
 
 // console.log(result);
 
+// EXAMPLE 5
+// const duplicatedsArr = [
+//   'rice',
+//   'beans',
+//   'plantain',
+//   'yam',
+//   'rice',
+//   'egg',
+//   'beans',
+//   'meat',
+//   'beef',
+//   'rice',
+// ];
+
+// const removeDuplicatedArr = duplicatedsArr.reduce((acc, item) => {
+//   if (!acc.includes(item)) {
+//     acc.push(item);
+//   }
+//   return acc;
+// }, []);
+
+// console.log(removeDuplicatedArr);
+
+// EXAMPLE 6
+// const twoDimArry = [
+//   ['james', 'mark', 'becky', 'great'],
+//   ['adam', 'ben', 'bright'],
+//   ['sarah', 'lisa'],
+// ];
+
+// const flattenedArry = twoDimArry.reduce((accumulator, currentArray) =>
+//   accumulator.concat(currentArray)
+// );
+// console.log(flattenedArry);
+
+// EXAMPLE 7
 // group people according to their age
 // const result = students.reduce((groupedPeople, person) => {
 //   const age = person.age;
@@ -67,6 +115,8 @@ whatever you return from your last iteration is going to your variable that you 
 // }, {});
 
 // console.log(result);
+
+// EXAMPLE 8
 // const result = [
 //   { name: 'James', score: 41 },
 //   { name: 'Mattew', score: 59 },
@@ -80,6 +130,7 @@ whatever you return from your last iteration is going to your variable that you 
 //   fail: [],
 // };
 
+// EXAMPLE 9
 // const groupedResult = result.reduce((total, cummulative) => {
 //   const mark = cummulative.score;
 //   if (mark >= 50) {
